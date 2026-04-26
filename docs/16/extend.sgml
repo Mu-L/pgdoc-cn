@@ -269,10 +269,9 @@ ________________________________________________________-->
     </para>
 ________________________________________________________-->
     <para>
-     Enumerated (enum) types can be considered as a subcategory of base
-    types.  The main difference is that they can be created using
-    just <acronym>SQL</acronym> commands, without any low-level programming.
-    Refer to <xref linkend="datatype-enum"/> for more information.
+     枚举（enum）类型可视为基础类型的子类别。
+     主要区别在于，枚举类型只需使用 <acronym>SQL</acronym> 命令即可创建，
+     无需任何底层编程。更多信息请参阅 <xref linkend="datatype-enum"/>。
     </para>
 <!-- pgdoc-cn_end sig_en=a0535ef8dea08e1b3d6df0c8fc119ad7 -->
    </sect2>
@@ -292,9 +291,8 @@ ________________________________________________________-->
     </para>
 ________________________________________________________-->
     <para>
-     <productname>PostgreSQL</productname> has three kinds
-    of <quote>container</quote> types, which are types that contain multiple
-    values of other types.  These are arrays, composites, and ranges.
+     <productname>PostgreSQL</productname> 有三种<quote>容器</quote>类型，
+     即包含其他类型多个值的类型，分别是数组、复合类型和范围类型。
     </para>
 <!-- pgdoc-cn_end sig_en=9f3897dc3d72a0505077419a159b5aa6 -->
 
@@ -309,12 +307,9 @@ ________________________________________________________-->
     </para>
 ________________________________________________________-->
     <para>
-     Arrays can hold multiple values that are all of the same type.  An array
-    type is automatically created for each base type, composite type, range
-    type, and domain type.  But there are no arrays of arrays.  So far as
-    the type system is concerned, multi-dimensional arrays are the same as
-    one-dimensional arrays.  Refer to <xref linkend="arrays"/> for more
-    information.
+     数组可以保存多个相同类型的值。每种基础类型、复合类型、范围类型和
+     域类型都会自动创建对应的数组类型。但不存在数组的数组。就类型系统
+     而言，多维数组与一维数组相同。更多信息请参阅 <xref linkend="arrays"/>。
     </para>
 <!-- pgdoc-cn_end sig_en=5b939543b08b1bed8cc2435decc7e5fe -->
 
@@ -331,14 +326,11 @@ ________________________________________________________-->
     </para>
 ________________________________________________________-->
     <para>
-     Composite types, or row types, are created whenever the user
-    creates a table. It is also possible to use <xref
-    linkend="sql-createtype"/> to
-    define a <quote>stand-alone</quote> composite type with no associated
-    table.  A composite type is simply a list of types with
-    associated field names.  A value of a composite type is a row or
-    record of field values.  Refer to <xref linkend="rowtypes"/>
-    for more information.
+     每当用户创建表时，都会自动创建复合类型（也称为行类型）。
+     也可以使用 <xref
+     linkend="sql-createtype"/> 定义不关联任何表的
+     <quote>独立</quote>复合类型。复合类型本质上是一组带有字段名的类型列表，
+     其值是一行或一条记录中的字段值。更多信息请参阅 <xref linkend="rowtypes"/>。
     </para>
 <!-- pgdoc-cn_end sig_en=ee36cbd68cbfb290f701fee83b4c7ff7 -->
 
@@ -351,10 +343,9 @@ ________________________________________________________-->
     </para>
 ________________________________________________________-->
     <para>
-     A range type can hold two values of the same type, which are the lower
-    and upper bounds of the range.  Range types are user-created, although
-    a few built-in ones exist.  Refer to <xref linkend="rangetypes"/>
-    for more information.
+     范围类型可以保存同一类型的两个值，即范围的上界和下界。
+     范围类型由用户创建，不过也有少数内置类型。
+     更多信息请参阅 <xref linkend="rangetypes"/>。
     </para>
 <!-- pgdoc-cn_end sig_en=264039d453523b45361e6170c2dc9dfc -->
    </sect2>
@@ -377,12 +368,10 @@ ________________________________________________________-->
     </para>
 ________________________________________________________-->
     <para>
-     A domain is based on a particular underlying type and for many purposes
-    is interchangeable with its underlying type.  However, a domain can have
-    constraints that restrict its valid values to a subset of what the
-    underlying type would allow.  Domains are created using
-    the <acronym>SQL</acronym> command <xref linkend="sql-createdomain"/>.
-    Refer to <xref linkend="domains"/> for more information.
+     域基于某种特定的底层类型，在许多情况下可与底层类型互换使用。
+     但域可以有约束，将其有效值限制为底层类型所允许值的子集。
+     域使用 <acronym>SQL</acronym> 命令 <xref linkend="sql-createdomain"/> 创建。
+     更多信息请参阅 <xref linkend="domains"/>。
     </para>
 <!-- pgdoc-cn_end sig_en=33b0ef3d0cd9a6783e26da140dcc251d -->
    </sect2>
@@ -2199,7 +2188,7 @@ ________________________________________________________-->
 <!-- pgdoc-cn_start sig_en=45d6cfab7d4115aad442a686cd91cf6c sig_cn_org=None source=14.1 
     <title>Security Considerations for Extensions</title>
 ________________________________________________________-->
-    <title>Security Considerations for Extensions</title>
+    <title>扩展的安全考虑</title>
 <!-- pgdoc-cn_end sig_en=45d6cfab7d4115aad442a686cd91cf6c -->
 
 <!-- pgdoc-cn_start sig_en=c3f8e949ff6908325d17aa00261696ce sig_cn_org=None source=14.1 
@@ -2351,7 +2340,7 @@ ________________________________________________________-->
 <!-- pgdoc-cn_start sig_en=fea6cabdd02f791582b5ef5c9e667d15 sig_cn_org=None source=14.1 
      <title>Security Considerations for Extension Scripts</title>
 ________________________________________________________-->
-     <title>Security Considerations for Extension Scripts</title>
+     <title>扩展脚本的安全考虑</title>
 <!-- pgdoc-cn_end sig_en=fea6cabdd02f791582b5ef5c9e667d15 -->
 
 <!-- pgdoc-cn_start sig_en=c0cccb6b1381f9040fa180381a50ec35 sig_cn_org=None source=14.1 

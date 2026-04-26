@@ -12162,7 +12162,7 @@ ________________________________________________________-->
 <!-- pgdoc-cn_start sig_en=cc00aedde3ccc2fcac9d184b5d4b3204 sig_cn_org=None source=14.1 
   <title>Progress Reporting</title>
 ________________________________________________________-->
-  <title>Progress Reporting</title>
+  <title>进度报告</title>
 <!-- pgdoc-cn_end sig_en=cc00aedde3ccc2fcac9d184b5d4b3204 -->
 
 <!-- pgdoc-cn_start sig_en=0c412d1c69e4e46ab38782fc82d3f68c sig_cn_org=None source=14.1 
@@ -12191,7 +12191,7 @@ ________________________________________________________-->
 <!-- pgdoc-cn_start sig_en=b3c43120d4f964441cbeab26905c5c77 sig_cn_org=None source=14.1 
   <title>ANALYZE Progress Reporting</title>
 ________________________________________________________-->
-  <title>ANALYZE Progress Reporting</title>
+  <title>ANALYZE 进度报告</title>
 <!-- pgdoc-cn_end sig_en=b3c43120d4f964441cbeab26905c5c77 -->
 
 <!-- pgdoc-cn_start sig_en=b7dd7a7f52edef073757b5211392f82b sig_cn_org=None source=14.1 
@@ -12645,7 +12645,7 @@ ________________________________________________________-->
 <!-- pgdoc-cn_start sig_en=dfe1c5b0ad415009306eea961f76b366 sig_cn_org=None source=14.1 
   <title>CREATE INDEX Progress Reporting</title>
 ________________________________________________________-->
-  <title>CREATE INDEX Progress Reporting</title>
+  <title>CREATE INDEX 进度报告</title>
 <!-- pgdoc-cn_end sig_en=dfe1c5b0ad415009306eea961f76b366 -->
 
 <!-- pgdoc-cn_start sig_en=1fb1ae4436d3261fb5627b4905f796e4 sig_cn_org=None source=14.1 
@@ -14542,7 +14542,7 @@ ________________________________________________________-->
 <!-- pgdoc-cn_start sig_en=f783d256cc34969c5f855557b514805c sig_cn_org=None source=14.1 
   <title>COPY Progress Reporting</title>
 ________________________________________________________-->
-  <title>COPY Progress Reporting</title>
+  <title>COPY 进度报告</title>
 <!-- pgdoc-cn_end sig_en=f783d256cc34969c5f855557b514805c -->
 
 <!-- pgdoc-cn_start sig_en=9fae14e6de831a5c76c2760a6f3fb881 sig_cn_org=None source=14.1 

@@ -6352,12 +6352,9 @@ ________________________________________________________-->
    </para>
 ________________________________________________________-->
    <para>
-    Enumerated (enum) types are data types that
-   comprise a static, ordered set of values.
-   They are equivalent to the <type>enum</type>
-   types supported in a number of programming languages. An example of an enum
-   type might be the days of the week, or a set of status values for
-   a piece of data.
+    枚举（enum）类型是包含一组静态、有序值的数据类型。
+    它们相当于许多编程语言中支持的 <type>enum</type> 类型。
+    枚举类型的一个示例是一周中的各天，或某条数据的一组状态值。
    </para>
 <!-- pgdoc-cn_end sig_en=5d4c878a03251b2337ec4362f8bb5d81 -->
 
@@ -6396,29 +6393,27 @@ SELECT * FROM person WHERE current_mood = 'happy';
     </para>
 ________________________________________________________-->
     <para>
-     Enum types are created using the <xref
-linkend="sql-createtype"/> command,
-for example:
+     枚举类型使用 <xref
+     linkend="sql-createtype"/> 命令创建，例如：
 
 <programlisting>
 CREATE TYPE mood AS ENUM ('sad', 'ok', 'happy');
-     </programlisting>
+</programlisting>
 
-Once created, the enum type can be used in table and function
-definitions much like any other type:
-    <programlisting>
-    CREATE TYPE mood AS ENUM ('sad', 'ok', 'happy');
+     创建后，枚举类型可以像其他类型一样在表和函数定义中使用：
+<programlisting>
+CREATE TYPE mood AS ENUM ('sad', 'ok', 'happy');
 CREATE TABLE person (
-name text,
-current_mood mood
- );
+    name text,
+    current_mood mood
+);
 INSERT INTO person VALUES ('Moe', 'happy');
- SELECT * FROM person WHERE current_mood = 'happy';
-name | current_mood
+SELECT * FROM person WHERE current_mood = 'happy';
+ name | current_mood
 ------+--------------
-    Moe  | happy
-    (1 row)
-    </programlisting>
+ Moe  | happy
+(1 row)
+</programlisting>
     </para>
 <!-- pgdoc-cn_end sig_en=77b8afcfd43eff3e3d44ed4a46593fae -->
     </sect2>
@@ -6465,35 +6460,33 @@ WHERE current_mood = (SELECT MIN(current_mood) FROM person);
      </para>
 ________________________________________________________-->
      <para>
-      The ordering of the values in an enum type is the
-      order in which the values were listed when the type was created.
-All standard comparison operators and related
-aggregate functions are supported for enums.  For example:
+      枚举类型中值的排序顺序就是创建该类型时列出值的顺序。
+      所有标准比较运算符和相关聚合函数都支持枚举类型。例如：
 
 <programlisting>
 INSERT INTO person VALUES ('Larry', 'sad');
- INSERT INTO person VALUES ('Curly', 'ok');
+INSERT INTO person VALUES ('Curly', 'ok');
 SELECT * FROM person WHERE current_mood > 'sad';
  name  | current_mood
- ------+--------------
-Moe   | happy
-Curly | ok
+-------+--------------
+ Moe   | happy
+ Curly | ok
 (2 rows)
- 
+
 SELECT * FROM person WHERE current_mood > 'sad' ORDER BY current_mood;
  name  | current_mood
- ------+--------------
-Curly | ok
-Moe   | happy
+-------+--------------
+ Curly | ok
+ Moe   | happy
 (2 rows)
 
 SELECT name
- FROM person
+FROM person
 WHERE current_mood = (SELECT MIN(current_mood) FROM person);
  name
 -------
-Larry
-     (1 row)
+ Larry
+(1 row)
      </programlisting>
      </para>
 <!-- pgdoc-cn_end sig_en=a704f865302a1ea88e157ccaf176abba -->
@@ -6529,8 +6522,7 @@ ERROR:  operator does not exist: mood = happiness
     </para>
 ________________________________________________________-->
     <para>
-     Each enumerated data type is separate and cannot
-be compared with other enumerated types.  See this example:
+     每种枚举数据类型都是独立的，不能与其他枚举类型相比较。请看这个示例：
 
 <programlisting>
 CREATE TYPE happiness AS ENUM ('happy', 'very happy', 'ecstatic');
@@ -6567,18 +6559,18 @@ SELECT person.name, holidays.num_weeks FROM person, holidays
     </para>
 ________________________________________________________-->
     <para>
-     If you really need to do something like that, you can either
-write a custom operator or add explicit casts to your query:
+     如果确实需要这样做，可以编写自定义运算符，
+     或在查询中添加显式类型转换：
 
-  <programlisting>
- SELECT person.name, holidays.num_weeks FROM person, holidays
-WHERE person.current_mood::text = holidays.happiness::text;
+<programlisting>
+SELECT person.name, holidays.num_weeks FROM person, holidays
+  WHERE person.current_mood::text = holidays.happiness::text;
  name | num_weeks
 ------+-----------
-Moe  |         4
-    (1 row)
-    
-    </programlisting>
+ Moe  |         4
+(1 row)
+
+</programlisting>
     </para>
 <!-- pgdoc-cn_end sig_en=311ad12e4b4afd4361d1a31258bae4bf -->
    </sect2>
