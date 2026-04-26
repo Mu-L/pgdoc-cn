@@ -4122,7 +4122,7 @@ SELECT alias, description, token FROM ts_debug('http://example.com/stuff/index.h
 <!-- pgdoc-cn_start sig_en=0f7a18b06c7228492c68cd5c6946fb4d sig_cn_org=None source=14.1 
   <title>Dictionaries</title>
 ________________________________________________________-->
-  <title>Dictionaries</title>
+  <title>词典</title>
 <!-- pgdoc-cn_end sig_en=0f7a18b06c7228492c68cd5c6946fb4d -->
 
 <!-- pgdoc-cn_start sig_en=355c78a91776e0b98530902054a33b6a sig_cn_org=None source=14.1 
